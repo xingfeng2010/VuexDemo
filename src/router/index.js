@@ -11,7 +11,7 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
+      name: 'XXXXXXX',
       component: HelloWorld
     },
     {
@@ -19,9 +19,9 @@ export default new Router({
       name: 'MyVue',
       component: MyVue,
       children: [
-        {path: "/", component:MyVue},
-        {path: "MyVue1", component:MyVue1},
-        {path: "MyVue2", component:MyVue2}
+        {path: "/", name: "MyVue", component:MyVue},
+        {path: "MyVue1", name: "MyVue1",  component:MyVue1},
+        {path: "MyVue2", name: "MyVue2", component:MyVue2}
       ]
     }
   ]

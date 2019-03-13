@@ -1,6 +1,7 @@
 <template>
     <div>
         {{msg}}
+        {{$route.params.username}}
     </div>
 </template>
 

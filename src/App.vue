@@ -5,9 +5,11 @@
     <div>
       <router-link to="/">首页</router-link>|
       <router-link to="/MyVue">MyVue</router-link>|
-      <router-link to="/MyVue/MyVue1">MyVue1</router-link>|
+      <router-link :to="{name: 'MyVue1', params: {username: 'JSPARAME'}}">MyVue1</router-link>|
       <router-link to="/MyVue/MyVue2">MyVue2</router-link>
     </div>
+
+    <p> {{ $route.name }}</p>
 
     <router-view/>
   </div>
