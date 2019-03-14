@@ -6,6 +6,7 @@ import MyVue1 from '@/components/MyVue1'
 import MyVue2 from '@/components/MyVue2'
 import params from '@/components/params'
 import Error from '@/components/Error'
+import Count from '@/components/Count'
 
 Vue.use(Router)
 
@@ -47,6 +48,9 @@ export default new Router({
     },{
       path:'*',
       component:Error
+    },{
+      path:'/Count',
+      component:Count
     }
   ]
 })
