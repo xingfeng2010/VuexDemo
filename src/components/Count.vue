@@ -9,12 +9,16 @@
             <button @click="add(10)">add</button>
             <button @click="reduce">reduce</button>
         </div>
+        <div>
+            <button @click="addAction">addAction</button>
+            <button @click="reduceAction">reduceAction</button>
+        </div>
     </div>
 </template>
 
 <script>
     import store from '@/vuex/store'
-    import {mapState, mapMutations, mapGetters} from 'vuex';
+    import {mapState, mapMutations, mapGetters, mapActions} from 'vuex';
     export default {
         name: "Count",
         data() {
@@ -23,13 +27,13 @@
             }
         },
         store,
-        methods: mapMutations([
-            'add',
-            'reduce'
-        ]),
+        methods: {
+            ...mapMutations(['add', 'reduce']),
+            ...mapActions(['addAction', 'reduceAction'])
+        },
         computed:{
             ...mapState(["count"]),
-            ...mapGetters(["count"]),
+           // ...mapGetters(["count"]),
         }
     }
 </script>
