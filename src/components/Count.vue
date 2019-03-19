@@ -14,7 +14,7 @@
 
 <script>
     import store from '@/vuex/store'
-    import {mapState, mapMutations} from 'vuex';
+    import {mapState, mapMutations, mapGetters} from 'vuex';
     export default {
         name: "Count",
         data() {
@@ -27,7 +27,10 @@
             'add',
             'reduce'
         ]),
-        computed:mapState(["count"])
+        computed:{
+            ...mapState(["count"]),
+            ...mapGetters(["count"]),
+        }
     }
 </script>
 
