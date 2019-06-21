@@ -10,14 +10,6 @@ const state = {
 const mutations = {
     add(state, n) {
         state.count+=n;
-
-       console.log("NODE_ENV:" + process.env.NODE_ENV);
-       console.log("baseUrl:" + process.env.buildEnv);
-       if (process.env.buildEnv == 'test') {
-           console.log("I am runing on test environment!!");
-       } else if (process.env.buildEnv == "release") {
-           console.log("I am runing on release environment!!");
-       }
     },
     reduce(state) {
         state.count--;

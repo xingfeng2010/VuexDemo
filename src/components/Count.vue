@@ -8,7 +8,7 @@
 
         <div>
             <button @click="add(10)">add</button>
-            <button @click="reduce">reduce</button>
+            <button @click="reduce()">reduce</button>
         </div>
         <div>
             <button @click="addAction">addAction</button>

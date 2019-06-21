@@ -1,0 +1,178 @@
+@import "./variables";
+@import "./mixins";
+
+.@{css-prefix} {
+  &-keyboard {
+    //position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: @base-zindex * 1500 + 2;
+    //transform: translate(0, 100%);
+    transition: transform .2s;
+    background-color: #F7F7F7;
+    &-active {
+      transform: translate(0, 0) !important;
+    }
+
+    &-content {
+      background-color: #FFF;
+      margin-top: .3rem;
+      position: relative;
+      &:before {
+        .top-line(@line-color);
+      }
+    }
+
+    &-title {
+      overflow: hidden;
+      padding: .3rem 0 .3rem !important;
+      color: #222;
+      margin-bottom: 1px;
+      font-size: .35rem !important;
+      text-align: center;
+      background-color: #FFF;
+      &:before {
+        font-family: @iconfont-inlay;
+        content: '\e60a';
+        font-size: .26rem !important;
+        color: #FF2424;
+        line-height: 1;
+        margin-right: .06rem;
+      }
+    }
+
+    &-numbers {
+      font-size: 0.9rem !important;
+      background-color: white;
+      > li {
+        width: 100%;
+        display: flex;
+        > a {
+          width: 1%; /* for old android */
+          flex: 1;
+          direction:ltr;
+          color: #666;
+          height: 1.5rem !important;
+          position: revert;
+          display: flex;
+          justify-content: center;
+          align-items: left;
+          overflow: hidden;
+          &:not(:last-child):after {
+            .right-line(@line-color);
+          }
+          &:before {
+            .top-line(@line-color);
+          }
+          &:active{
+            background-color: #F7F7F7;
+          }
+        }
+        &:last-child {
+          > a:last-child,
+          > a:nth-last-child(3) {
+            background-color: #F7F7F7;
+            font-size: .45rem !important;
+            color: #686868;
+          }
+          > a:last-child {
+            &:after {
+              font-family: @iconfont-inlay;
+              content: '\e609';
+              font-size: .6rem !important;
+            }
+          }
+        }
+      }
+    }
+
+    &-head {
+      height: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #444;
+      font-size: .37rem;
+      position: relative;
+      &:after {
+        .bottom-line(@line-color);
+      }
+    }
+
+    &-password {
+      margin: 0 .8rem;
+      display: flex;
+      position: relative;
+      background-color: #FFF;
+      &:after {
+        content: '';
+        width: 200%;
+        height: 200%;
+        transform: scale(.5);
+        position: absolute;
+        border: 1px solid @line-color;
+        top: 0;
+        left: 0;
+        transform-origin: 0 0;
+        border-radius: 4px;
+      }
+      li {
+        flex: 1;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 1rem;
+        &:not(:last-child):after {
+          content: '';
+          width: 1px;
+          height: 50%;
+          position: absolute;
+          right: 0;
+          top: 25%;
+          background-color: @line-color;
+          transform: scaleX(.5);
+        }
+        i {
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background-color: #000;
+        }
+      }
+    }
+
+    &-error {
+      padding: 2px .8rem;
+      color: #F00;
+      overflow: hidden;
+      height: .5rem;
+      line-height: .5rem;
+      font-size: .24rem;
+      text-align: left;
+    }
+
+    &-left {
+      width: 50%;
+      float:left;
+      clear:right;
+      height:20px;
+      background-color:yellow;
+    }
+
+    &-right {
+      width:50%;
+      float:left;
+      clear:right;
+      height:20px;
+      background-color:blue;
+    }
+  ;
+    -moz-left: ;
+    -ms-left: ;
+    -o-left: ;
+    -khtml-left: ;
+    left: ;
+  }
+}

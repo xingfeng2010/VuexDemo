@@ -1,0 +1,27 @@
+module.exports = [
+  {
+    DEBUG:{},
+    NAME:"开发环境:tspdemo",
+    ENVIRONMENT_OBJECT_BASEURL:"http://tspdemo.changan.com.cn",
+  },
+  {
+    DEBUG_NO_NET_DEBUG:{},
+    NAME:"预生产环境:iovpreapi",
+    ENVIRONMENT_OBJECT_BASEURL:"http://iovpreapi.changan.com.cn",
+  },
+  {
+    TSP_TEST:{},
+    NAME:"测试环境:tsptest",
+    ENVIRONMENT_OBJECT_BASEURL:"http://tsptest.changan.com.cn",
+  },
+  {
+    TSP_Tencent:{},
+    NAME:"腾讯云环境:cloud.incallapi",
+    ENVIRONMENT_OBJECT_BASEURL:"https://cloud.incallapi.changan.com.cn",
+  },
+  {
+    RELEASE:{},
+    NAME:"正式环境:incallapi",
+    ENVIRONMENT_OBJECT_BASEURL:"https://incallapi.changan.com.cn",
+  },
+]

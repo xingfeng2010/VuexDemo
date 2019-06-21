@@ -8,6 +8,7 @@
       <router-link to="/params/198/jspang website is very good">params</router-link>|
       <router-link to="/jspang">jspang</router-link>|
       <router-link to="/Count">Count</router-link>
+      <router-link to="/keyboard">Count</router-link>
       <!--<router-link to="/Error"></router-link>-->
       <!--<router-link :to="{name: 'MyVue1', params: {username: 'JSPARAME'}}">MyVue1</router-link>|-->
       <!--<router-link to="/MyVue/MyVue2">MyVue2</router-link>-->
@@ -23,6 +24,7 @@
     <router-view name="right" style="float:right;width:50%;background-color:#c0c;height:300px;"></router-view>
     <!--<button @click="goback">后退</button>-->
     <!--<button @click="goHome">回到首页</button>-->
+    <vue-progress-bar></vue-progress-bar>
   </div>
 </template>
 
