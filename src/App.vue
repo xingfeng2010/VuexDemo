@@ -8,7 +8,6 @@
       <router-link to="/params/198/jspang website is very good">params</router-link>|
       <router-link to="/jspang">jspang</router-link>|
       <router-link to="/Count">Count</router-link>
-      <router-link to="/keyboard">Count</router-link>
       <!--<router-link to="/Error"></router-link>-->
       <!--<router-link :to="{name: 'MyVue1', params: {username: 'JSPARAME'}}">MyVue1</router-link>|-->
       <!--<router-link to="/MyVue/MyVue2">MyVue2</router-link>-->
