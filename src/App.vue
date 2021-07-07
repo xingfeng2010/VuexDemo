@@ -13,6 +13,10 @@
       <!--<router-link to="/MyVue/MyVue2">MyVue2</router-link>-->
     </div>
 
+    <div id="clickButton" style="text-align:center">
+      <el-button type="text" icon="el-icon-plus" @click="buttonClick">点击跳转</el-button>
+    </div>
+
     <p> {{ $route.name }}</p>
 
     <transition name="fade">
@@ -37,7 +41,11 @@ export default {
 
       goHome() {
           this.$router.push('/');
-      }
+      },
+
+    buttonClick() {
+          this.$router.push('/button-push');
+    }
   }
 }
 </script>
@@ -64,5 +72,12 @@ export default {
 .fade-leave-active{
   opacity:0;
   transition:opacity .5s;
+}
+#clickButton {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  text-align:center;
+  background: url("./assets/music_play.png")  no-repeat;
 }
 </style>
