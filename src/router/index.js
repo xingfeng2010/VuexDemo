@@ -7,7 +7,6 @@ import MyVue2 from '@/components/MyVue2'
 import params from '@/components/params'
 import Error from '@/components/Error'
 import Count from '@/components/Count'
-import keyboard from '@/components/keyboard'
 import ButtonPush from '@/components/ButtonPush'
 
 Vue.use(Router)
@@ -53,9 +52,6 @@ export default new Router({
     },{
       path:'/Count',
       component:Count
-    }, {
-      path:'/keyboard',
-      component:keyboard
     },{
       path:'/button-push',
       component:ButtonPush
